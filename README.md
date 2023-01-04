@@ -29,3 +29,8 @@ If I could tail the log of the those blocked connection attempts I could use tha
 Update as of: Wed Jan  4 07:58:24 PM CET 2023
 
 Decided to spin up a [SSH honey-pot](https://en.wikipedia.org/wiki/Honeypot_(computing)) instead of exposing my local firewall logs as that's probably safer.
+
+These two honey-pot implementations seem nice:
+
+* https://github.com/Ex0dIa-dev/ssh-honeypot-go
+* https://github.com/ashmckenzie/go-sshoney
