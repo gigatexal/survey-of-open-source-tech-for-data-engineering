@@ -15,7 +15,7 @@ The final deliverable will be a document that surveys all the current technology
 
 ## But...
 
-But to best understand the various bits of tech like Apache Spark or Apache Hudi or Apache Iceberg it would probably make more sense to understand the distinction between
+But to best understand the various bits of tech like Apache Spark or Apache Hudi or Apache Iceberg or BigQuery or some other GCP (for now) managed service it would probably make more sense to understand the distinction between
 or the evolution of data architectures over time:
 
 Star / Snowflake schema'd Data Warehouse -> DataLake -> DataLakeHouse -> tbd?
