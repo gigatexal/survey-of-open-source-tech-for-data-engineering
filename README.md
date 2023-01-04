@@ -25,3 +25,7 @@ Star / Snowflake schema'd Data Warehouse -> DataLake -> DataLakeHouse -> tbd?
 My home firewall filters out a lot of things. It drops packets for random hosts that are trying to connect to it all the time.
 
 If I could tail the log of the those blocked connection attempts I could use that as a way to ingest data -- and if the volume is not enough -- I could create a SSH honey pot to attract such connections to generate more data.
+
+Update as of: Wed Jan  4 07:58:24 PM CET 2023
+
+Decided to spin up a [SSH honey-pot](https://en.wikipedia.org/wiki/Honeypot_(computing)) instead of exposing my local firewall logs as that's probably safer.
