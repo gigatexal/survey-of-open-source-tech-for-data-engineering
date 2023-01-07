@@ -8,7 +8,7 @@ The goal is to model a book store.
 
 Customer
 ---
-pk: uuid
+id: uuid
 first_name:  string
 last_name: string
 birth_date: date
@@ -18,26 +18,33 @@ email: string
 
 Book
 ---
-pk: uuid
+id: uuid
 title: string
 author: string
 published_edition_date: date
-whole_sale_price: int # pennies i.e 100 = 100 usd
-sale_price: int # pennies i.e 100 = 1 dollar usd
+whole_sale_price: float
+sale_price: float 
 added_at: timestamp
 deactivated_at: timestamp
 
 PurchaseItem
 ---
-pk: uuid
+id: uuid
 created_at: timestamp
 payment_method: ENUM(CreditCard, Cash, Check, DebitCard)
 discounts_used: boolean
+fk: Customer.id
+tax_rate: float
+price: float
 
-Order /* one line per book sold by 
+Order /* one line per book sold */
 ---
-pk: uuid
-fk: PurchaesItem.pk
+id: uuid
+order_line: int
+pk: (id, order_line)
+fk: PurchaseItem.id
+
+
 
 
 
