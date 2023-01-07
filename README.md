@@ -34,3 +34,7 @@ These two honey-pot implementations seem nice:
 
 * https://github.com/Ex0dIa-dev/ssh-honeypot-go
 * https://github.com/ashmckenzie/go-sshoney
+
+Update as of: Sa 7. Jan 13:37:36 CET 2023
+
+Going to use [faker](https://pypi.org/project/Faker/) to generate simulated point-of-sale data from a fictional store instead of the honey-pot.
