@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+
 class Book(BaseModel):
     version: int
     _type: str = 'book'

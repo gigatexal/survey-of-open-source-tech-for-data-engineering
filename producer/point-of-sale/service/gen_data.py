@@ -1,8 +1,6 @@
 import random
 
-from typing import Iterable, Generator
-
-from models.models import Book
+from typing import Iterable, Generator, Callable
 
 def pluralize_or_not(word: str)->str:
     if word.endswith("r"):
@@ -25,6 +23,7 @@ def generate_title_from_noun(source: str, prefix: str = '', pluralize=True)->Gen
             choice: str = random.choice(all_nouns) 
             all_nouns.pop(all_nouns.index(choice))
             if pluralize:
+                # TODO: clean this up -- this is ugly
                 if len(prefix):
                     yield f"{prefix} {pluralize_or_not(choice)}"
                 else:
@@ -33,8 +32,3 @@ def generate_title_from_noun(source: str, prefix: str = '', pluralize=True)->Gen
                 yield f"{prefix} {choice}"
             else:
                 yield f"{choice}"
-
-
-
-#def create_new_book(subject:str, author: str, price: float, isbn: str, prefix: str ="Everything You Wanted to Know About ", version: int = 1) ->Book:
-    
