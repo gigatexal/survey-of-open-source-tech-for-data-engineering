@@ -17,7 +17,15 @@ def no_dups(f):
 
 @no_dups
 def isbn()->str:
-    return fake.isbn10()
+    return fake.isbn13()
+
+@no_dups
+def author()->str:
+    return fake.name()
+
+@no_dups
+def title()->str:
+    return fake.bs()
 
 
 def new_book(**kwargs)->Book:
