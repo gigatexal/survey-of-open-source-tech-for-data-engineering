@@ -7,5 +7,3 @@ class Book(BaseModel):
     author: str
     price: float
     isbn: str
-
-        
