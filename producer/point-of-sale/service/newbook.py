@@ -32,7 +32,7 @@ def title()->str:
 def price(lower=17, upper=99)->float:
     return random.randint(lower, upper) + (random.randint(0,99)/100)
 
-#@no_dups
+@no_dups
 def new_book(title, author, price, isbn, version=1)->Book:
     kwargs = {
             'version': version,
