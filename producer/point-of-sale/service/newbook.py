@@ -5,7 +5,7 @@ import random
 
 fake = Faker()
 
-def no_dups(f):
+def inmem_dedup(f):
     s = set()
     def wrap(*args, **kwargs):
         while True:
@@ -17,22 +17,22 @@ def no_dups(f):
                 continue
     return wrap
 
-@no_dups
+@inmem_dedup
 def isbn()->str:
     return fake.isbn13()
 
-@no_dups
+@inmem_dedup
 def author()->str:
     return fake.name()
 
-@no_dups
+@inmem_dedup
 def title()->str:
     return fake.bs()
 
 def price(lower=17, upper=99)->float:
     return random.randint(lower, upper) + (random.randint(0,99)/100)
 
-@no_dups
+@inmem_dedup
 def new_book(title, author, price, isbn, version=1)->Book:
     return Book(
             title=title,
