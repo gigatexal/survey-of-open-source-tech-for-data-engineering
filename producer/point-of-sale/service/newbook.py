@@ -17,6 +17,16 @@ def inmem_dedup(f):
                 continue
     return wrap
 
+
+def db_dedup(f):
+    import sqlite3 as db
+    import tempfile
+    # TODO: implement
+    # just store the __hash__() of a given object
+    pass
+    
+
+
 @inmem_dedup
 def isbn()->str:
     return fake.isbn13()
