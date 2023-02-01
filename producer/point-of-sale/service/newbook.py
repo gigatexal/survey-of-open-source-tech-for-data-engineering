@@ -34,12 +34,11 @@ def price(lower=17, upper=99)->float:
 
 @no_dups
 def new_book(title, author, price, isbn, version=1)->Book:
-    kwargs = {
-            'version': version,
-            'title': title,
-            'author': author,
-            'price': price,
-            'isbn': isbn}
-    return Book(**kwargs)
+    return Book(
+            title=title,
+            author=author,
+            price=price,
+            isbn=isbn,
+            version=version)
 
 
